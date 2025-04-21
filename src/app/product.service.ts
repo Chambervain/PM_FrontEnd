@@ -21,4 +21,16 @@ export class ProductService {
     return this.httpClient.post(`${this.baseURL}`, product);
   }
 
+  getProductById(id: number): Observable<Product>{
+    return this.httpClient.get<Product>(`${this.baseURL}/${id}`);
+  }
+
+  updateProduct(id: number, product: Product): Observable<any>{
+    return this.httpClient.put(`${this.baseURL}/${id}`, product);
+  }
+
+  deleteProduct(id: number): Observable<any>{
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
+
 }

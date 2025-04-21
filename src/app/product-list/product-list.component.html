@@ -5,6 +5,7 @@
             <th> Name </th>
             <th> Quantity </th>
             <th> Description </th>
+            <th> Actions </th>
         </tr>
     </thead>
     <tbody>
@@ -12,6 +13,11 @@
             <td> {{product.name}} </td>
             <td> {{product.quantity}} </td>
             <td> {{product.description}} </td>
+            <td>
+                <button (click)="updateProduct(product.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteProduct(product.id)" class="btn btn-danger" style="margin-left: 10px">Remove</button>
+                <button (click)="productDetails(product.id)" class="btn btn-info" style="margin-left: 10px">Detail</button>
+            </td>
         </tr>
     </tbody>
 </table>
