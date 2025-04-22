@@ -8,6 +8,7 @@ import { CreateProductComponent } from './create-product/create-product.componen
 import { FormsModule } from '@angular/forms';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ProductListComponent,
     CreateProductComponent,
     UpdateProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,

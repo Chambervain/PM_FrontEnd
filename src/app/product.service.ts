@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from './product';
 import { ProductCreation } from './product-creation';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ import { ProductCreation } from './product-creation';
 export class ProductService {
 
   private baseURL = "http://localhost:8080/api/products";
+  private userURL = "http://localhost:8080/api/users";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -31,6 +33,10 @@ export class ProductService {
 
   deleteProduct(id: number): Observable<any>{
     return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
+
+  getUserList(): Observable<User[]>{
+    return this.httpClient.get<User[]>(`${this.userURL}`);
   }
 
 }

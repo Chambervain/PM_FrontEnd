@@ -14,9 +14,15 @@
             <td> {{product.quantity}} </td>
             <td> {{product.description}} </td>
             <td>
-                <button (click)="updateProduct(product.id)" class="btn btn-info">Update</button>
+                <button (click)="updateProduct(product.id)" class="btn btn-primary">Update</button>
                 <button (click)="deleteProduct(product.id)" class="btn btn-danger" style="margin-left: 10px">Remove</button>
-                <button (click)="productDetails(product.id)" class="btn btn-info" style="margin-left: 10px">Detail</button>
+                <!-- <button (click)="productDetails(product.id)" class="btn btn-info" style="margin-left: 10px">Detail</button> -->
+                <button
+                (click)="productDetails(product.id)"
+                class="btn"
+                style="margin-left: 10px; background-color: purple; color: white;">
+                Details
+              </button>
             </td>
         </tr>
     </tbody>
