@@ -27,4 +27,12 @@ export class UserListComponent implements OnInit{
     });
   }
 
+  doDeleteUser(name: string){
+    console.log("The delete method triggered, the delete user name: " + name);
+    this.service.deleteUser(name).subscribe(data => {
+      console.log(data);
+      this.getUsers();
+    });
+  }
+
 }

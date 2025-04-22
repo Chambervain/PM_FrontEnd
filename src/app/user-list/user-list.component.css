@@ -1,0 +1,7 @@
+.user-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+    max-width: calc(4 * 300px + 3 * 16px);
+  }

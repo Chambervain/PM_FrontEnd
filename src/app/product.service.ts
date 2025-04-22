@@ -39,4 +39,12 @@ export class ProductService {
     return this.httpClient.get<User[]>(`${this.userURL}`);
   }
 
+  createUser(user: User): Observable<any>{
+    return this.httpClient.post(`${this.userURL}`, user);
+  }
+
+  deleteUser(name: string): Observable<any>{
+    return this.httpClient.delete(`${this.userURL}/${name}`);
+  }
+
 }

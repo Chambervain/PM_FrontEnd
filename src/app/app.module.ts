@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { CreateUserComponent } from './create-user/create-user.component';
+
 
 @NgModule({
   declarations: [
@@ -17,13 +20,15 @@ import { UserListComponent } from './user-list/user-list.component';
     CreateProductComponent,
     UpdateProductComponent,
     ProductDetailsComponent,
-    UserListComponent
+    UserListComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NzCardModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
