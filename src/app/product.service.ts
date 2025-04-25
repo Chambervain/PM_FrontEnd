@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Product } from './product';
 import { ProductCreation } from './product-creation';
 import { User } from './user';
+import { UserInfo } from './user-info';
 
 @Injectable({
   providedIn: 'root'
@@ -45,6 +46,10 @@ export class ProductService {
 
   deleteUser(name: string): Observable<any>{
     return this.httpClient.delete(`${this.userURL}/${name}`);
+  }
+
+  getUserDetail(name: string): Observable<UserInfo>{
+    return this.httpClient.get<UserInfo>(`${this.userURL}/${name}`);
   }
 
 }

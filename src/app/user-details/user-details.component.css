@@ -1,0 +1,44 @@
+/* user‑details.component.css */
+
+.table-wrapper {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .fancy-table {
+    width: 800px;
+    border-collapse: collapse;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .fancy-table th,
+  .fancy-table td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    position: relative;
+  }
+
+  .fancy-table thead th {
+    text-align: left;
+    background-color: #55608f;
+  }
+
+  .fancy-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .fancy-table tbody td:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+  }

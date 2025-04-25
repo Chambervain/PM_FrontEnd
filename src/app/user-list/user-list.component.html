@@ -9,9 +9,10 @@
       [nzBodyStyle]="{'background-color': '#EDF2F5'}"
       [nzHoverable]="true"
     >
+    <a href="#" role="button" style="color: inherit; text-decoration: none;" (click)="checkUser(u.name); $event.preventDefault()">
       <p>Email: {{ u.email }}</p>
       <p>Role:  {{ u.role }}</p>
-
+    </a>
       <ng-template #extraTemplate>
         <a href="#" role="button" style="color: darkred" (click)="doDeleteUser(u.name); $event.preventDefault()">
           Delete

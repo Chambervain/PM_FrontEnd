@@ -1,0 +1,54 @@
+<br><br>
+
+<div class="d-flex justify-content-center">
+
+  <div style="width: 290px;">
+    <h3>User Details Page</h3><br><br><br>
+    <div class="d-flex align-items-start">
+      <img
+        [src]="'assets/' + userDetail.name + '.jpg'"
+        alt="{{ userDetail.name }}"
+        style="
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          margin-right: 90px;
+          margin-left: -150px;
+        "/>
+
+      <div style="margin-top: 40px;">
+        <div>
+          <label><b>Name:</b></label> {{ userDetail.name }}
+        </div>
+        <br />
+        <div>
+          <label><b>Email:</b></label> {{ userDetail.email }}
+        </div>
+        <br />
+        <div>
+          <label><b>Role:</b></label> {{ userDetail.role }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><br><br><br><br>
+
+<div class="table-wrapper">
+    <table class="fancy-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.name }}</td>
+          <td>{{ product.quantity }}</td>
+          <td>{{ product.description }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

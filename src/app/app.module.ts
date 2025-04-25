@@ -11,6 +11,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { UserListComponent } from './user-list/user-list.component';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
     UpdateProductComponent,
     ProductDetailsComponent,
     UserListComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

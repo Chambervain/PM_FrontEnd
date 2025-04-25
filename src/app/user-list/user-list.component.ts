@@ -35,4 +35,8 @@ export class UserListComponent implements OnInit{
     });
   }
 
+  checkUser(name: string){
+    this.router.navigate(['user-details', name]);
+  }
+
 }
